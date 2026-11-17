@@ -7,9 +7,6 @@
   <title>BritVocab Pro — Inteligentna Nauka Angielskiego</title>
   <link rel="manifest" href='data:application/manifest+json,{"name":"BritVocab Pro","short_name":"BritVocab","start_url":".","display":"standalone","background_color":"#f1f5f9","theme_color":"#1e3a8a"}' />
   <style>
-    /* ==========================================================================
-       1. TYPOGRAFIA I ZMIENNE MOTYWÓW (BOY vs GIRL)
-       ========================================================================== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -65,9 +62,6 @@
       padding-bottom: 40px;
     }
 
-    /* ==========================================================================
-       2. SUBTELNE TŁO WIELKIEJ BRYTANII (SVG WATERMARK)
-       ========================================================================== */
     .uk-skyline-bg {
       position: fixed;
       bottom: 0;
@@ -78,7 +72,6 @@
       z-index: 0;
       pointer-events: none;
       opacity: 0.08;
-      transition: opacity 0.3s ease;
     }
 
     .uk-skyline-bg svg {
@@ -89,9 +82,6 @@
       fill: none;
     }
 
-    /* ==========================================================================
-       3. UKŁAD GŁÓWNY I NAWIGACJA
-       ========================================================================== */
     .app-container {
       position: relative;
       z-index: 1;
@@ -148,9 +138,6 @@
       gap: 10px;
     }
 
-    /* ==========================================================================
-       4. PRZYCISKI 3D (STANDARDOWE ORAZ NOWE OWALNE DO ĆWICZEŃ)
-       ========================================================================== */
     .btn-3d {
       border: none;
       border-radius: 12px;
@@ -160,10 +147,7 @@
       cursor: pointer;
       color: #ffffff;
       background: var(--btn-face);
-      box-shadow:
-        0 4px 0 var(--btn-shadow),
-        0 6px 12px rgba(0, 0, 0, 0.14),
-        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+      box-shadow: 0 4px 0 var(--btn-shadow), 0 6px 12px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.45);
       transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.15s ease;
       display: inline-flex;
       align-items: center;
@@ -178,7 +162,6 @@
       box-shadow: 0 1px 0 var(--btn-shadow), 0 2px 5px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
     }
 
-    /* Owalne, równe i większe przyciski do modułu ćwiczeń */
     .btn-quiz {
       border: none;
       border-radius: 999px !important;
@@ -188,10 +171,7 @@
       cursor: pointer;
       color: #ffffff;
       background: var(--btn-face);
-      box-shadow:
-        0 5px 0 var(--btn-shadow),
-        0 8px 16px rgba(0, 0, 0, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      box-shadow: 0 5px 0 var(--btn-shadow), 0 8px 16px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.5);
       transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.15s ease;
       display: inline-flex;
       align-items: center;
@@ -229,9 +209,6 @@
     .btn-3d.secondary:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--btn-secondary-shadow), inset 0 1px 0 #ffffff; }
     .btn-3d.secondary.active-tab { background: var(--accent-soft); border-color: var(--accent-primary); color: var(--accent-primary); }
 
-    /* ==========================================================================
-       5. KARTY I FORMULARZE
-       ========================================================================== */
     .card {
       background: var(--bg-surface);
       backdrop-filter: blur(10px);
@@ -316,7 +293,6 @@
       box-shadow: 0 0 0 3px var(--accent-soft);
     }
 
-    /* Pasek postępu 51. słowa */
     .milestone-bar {
       background: var(--bg-surface-alt);
       border: 1px solid var(--accent-border);
@@ -341,7 +317,6 @@
       transition: width 0.4s ease;
     }
 
-    /* Lista słów */
     .word-list {
       display: flex;
       flex-direction: column;
@@ -393,9 +368,6 @@
       color: #1e293b;
     }
 
-    /* ==========================================================================
-       6. MODUŁ ĆWICZEŃ (OCZYSZCZONY Z ROZPRASZACZY)
-       ========================================================================== */
     .quiz-box {
       text-align: center;
       padding: 10px 4px;
@@ -455,9 +427,6 @@
     .feedback-banner.ok { display: block; background: #dcfce7; color: #166534; border: 1px solid #86efac; }
     .feedback-banner.err { display: block; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
 
-    /* ==========================================================================
-       7. MODAL WIELOZNACZNOŚCI
-       ========================================================================== */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -500,7 +469,6 @@
 </head>
 <body>
 
-  <!-- SUBTELNE TŁO UK -->
   <div class="uk-skyline-bg" aria-hidden="true">
     <svg viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M0 345 Q 360 338 720 345 T 1440 345" />
@@ -515,687 +483,4 @@
       <polygon points="456,105 487,32 518,105" />
       <circle cx="487" cy="142" r="18" />
       <rect x="640" y="220" width="56" height="125" rx="4" />
-      <path d="M638 220 Q 668 196 698 220" />
-      <rect x="860" y="130" width="46" height="215" />
-      <polygon points="858,130 883,85 908,130" />
-      <rect x="1080" y="130" width="46" height="215" />
-      <polygon points="1078,130 1103,85 1128,130" />
-      <line x1="906" y1="165" x2="1080" y2="165" />
-      <line x1="780" y1="275" x2="1210" y2="275" />
-      <path d="M780 275 Q 820 215 860 165" />
-      <path d="M1126 165 Q 1168 215 1210 275" />
-    </svg>
-  </div>
-
-  <div class="app-container">
-    <!-- NAGŁÓWEK -->
-    <header>
-      <div class="brand">
-        <svg class="brand-flag" viewBox="0 0 60 30">
-          <rect width="60" height="30" fill="#012169"/>
-          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"/>
-          <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
-        </svg>
-        <div>
-          <h1>BritVocab Pro</h1>
-          <span>Inteligentny trener słownictwa i wymowy</span>
-        </div>
-      </div>
-
-      <nav class="nav-tabs">
-        <button class="btn-3d secondary active-tab" data-tab="vocab" onclick="switchTab('vocab')">📚 Słownictwo</button>
-        <button class="btn-3d secondary" data-tab="practice" onclick="switchTab('practice')">🎯 Ćwiczenia</button>
-        <button class="btn-3d secondary" data-tab="stats" onclick="switchTab('stats')">📊 Statystyki</button>
-        <button class="btn-3d secondary" data-tab="settings" onclick="switchTab('settings')">🎨 Ustawienia</button>
-      </nav>
-    </header>
-
-    <!-- ZAKŁADKA 1: SŁOWNICTWO (Z AUTOMATYCZNYM TŁUMACZENIEM W LOCIE) -->
-    <section id="tab-vocab">
-      <div class="milestone-bar" id="milestone-banner">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-          <strong id="milestone-title">🔓 Odblokowanie kategoryzacji: 0 / 51 słów</strong>
-          <span id="milestone-desc" style="font-size:0.85rem; color:var(--text-secondary);">Po 51. słowie system podzieli bazę na 8 kategorii (w tym techniczne).</span>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill" id="milestone-fill" style="width: 0%;"></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">
-          <span>➕ Dodaj nową parę słów (Tłumaczenie na żywo)</span>
-          <button class="btn-3d secondary" style="padding:6px 12px; font-size:0.82rem;" onclick="seedSampleWords()">⚡ Wgraj 51 słów (Demo)</button>
-        </div>
-        <form id="add-word-form" class="grid-2" onsubmit="handleAddWord(event)">
-          <div class="input-group">
-            <label for="input-en">Angielski (EN)</label>
-            <input type="text" id="input-en" placeholder="Wpisz słowo EN..." required autocomplete="off" oninput="liveTranslate('en')" />
-          </div>
-          <div class="input-group">
-            <label for="input-pl">Polski (PL)</label>
-            <input type="text" id="input-pl" placeholder="Wpisz tłumaczenie PL..." required autocomplete="off" oninput="liveTranslate('pl')" />
-          </div>
-          <div style="grid-column: 1 / -1; display:flex; justify-content:flex-end;">
-            <button type="submit" class="btn-3d">Zapisz w bazie</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="card">
-        <div class="card-title">
-          <span>🗂️ Baza słówek (<span id="total-count">0</span>)</span>
-          <select id="category-filter" style="max-width: 280px;" onchange="renderWordList()">
-            <option value="ALL">Wszystkie kategorie</option>
-          </select>
-        </div>
-        <div class="word-list" id="word-list-container"></div>
-      </div>
-    </section>
-
-    <!-- ZAKŁADKA 2: ĆWICZENIA (MINIMALISTYCZNE, BEZ ROZPRASZACZY) -->
-    <section id="tab-practice" class="hidden">
-      <div class="card">
-        <div class="card-title">
-          <span>🎯 Trening aktywny</span>
-          <select id="quiz-direction" style="max-width: 220px;" onchange="nextQuestion()">
-            <option value="MIX">Kierunek: Mieszany</option>
-            <option value="EN_PL">Angielski → Polski</option>
-            <option value="PL_EN">Polski → Angielski</option>
-          </select>
-        </div>
-
-        <div id="quiz-empty" class="hidden" style="text-align:center; padding:30px;">
-          <p style="font-size:1.1rem; font-weight:700; margin-bottom:12px;">Dodaj przynajmniej 1 słowo, aby rozpocząć trening.</p>
-          <button class="btn-3d" onclick="switchTab('vocab')">Przejdź do słownictwa</button>
-        </div>
-
-        <div id="quiz-active" class="quiz-box">
-          <div class="quiz-prompt-label" id="quiz-dir-label">Przetłumacz</div>
-          <div class="quiz-word" id="quiz-question-word">—</div>
-
-          <div class="quiz-controls">
-            <input type="text" id="quiz-answer-input" placeholder="Wpisz tłumaczenie..." autocomplete="off" onkeydown="if(event.key==='Enter') checkAnswer()" />
-
-            <!-- Równe, owalne, większe przyciski -->
-            <div class="quiz-actions">
-              <button type="button" class="btn-quiz success" onclick="checkAnswer()">✅ Sprawdź</button>
-              <button type="button" class="btn-quiz" id="btn-mic" onclick="startSpeechRecognition()">🎤 Mowa</button>
-              <button type="button" class="btn-quiz warning" onclick="dontKnowWord()">🆘 Nie znam</button>
-            </div>
-
-            <div id="speech-status" style="font-size:0.84rem; color:var(--text-secondary); min-height:18px; text-align:center;"></div>
-            <div id="quiz-feedback" class="feedback-banner"></div>
-
-            <div id="next-btn-wrap" class="hidden" style="margin-top:10px; text-align:center;">
-              <button type="button" class="btn-quiz" onclick="nextQuestion()">Następne słowo ➡️</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ZAKŁADKA 3: STATYSTYKI -->
-    <section id="tab-stats" class="hidden">
-      <div class="card">
-        <div class="card-title"><span>📈 Statystyki i pewność (Mastery Score)</span></div>
-        <div class="grid-4">
-          <div class="stat-box">
-            <div class="stat-value" id="stat-total">0</div>
-            <div class="stat-label">Słowa ogółem</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-value" id="stat-mastered">0</div>
-            <div class="stat-label">Opanowane (≥85%)</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-value" id="stat-avg-confidence">0%</div>
-            <div class="stat-label">Średnia pewność</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-value" id="stat-tech-count">0</div>
-            <div class="stat-label">Techniczne i inż.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title"><span>🧩 Podział na 8 kategorii</span></div>
-        <div id="category-breakdown" class="grid-2"></div>
-      </div>
-    </section>
-
-    <!-- ZAKŁADKA 4: USTAWIENIA I DANE -->
-    <section id="tab-settings" class="hidden">
-      <div class="card">
-        <div class="card-title"><span>🎨 Motyw wizualny</span></div>
-        <div style="display:flex; flex-wrap:wrap; gap:14px;">
-          <button class="btn-3d" style="background: linear-gradient(180deg, #3b82f6, #1e3a8a);" onclick="setTheme('boy')">🇬🇧 Motyw Chłopięcy</button>
-          <button class="btn-3d" style="background: linear-gradient(180deg, #ec4899, #9d174d);" onclick="setTheme('girl')">🌸 Motyw Dziewczęcy</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title"><span>💾 Pamięć i kopia zapasowa</span></div>
-        <div style="display:flex; flex-wrap:wrap; gap:12px;">
-          <button class="btn-3d secondary" onclick="exportBackup()">⬇️ Eksport JSON</button>
-          <label class="btn-3d secondary" style="cursor:pointer;">
-            ⬆️ Import JSON
-            <input type="file" accept=".json" style="display:none;" onchange="importBackup(event)" />
-          </label>
-          <button class="btn-3d warning" onclick="clearAllData()">🗑️ Wyczyść bazę</button>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- MODAL WIELOZNACZNOŚCI -->
-  <div class="modal-backdrop" id="polysemy-modal">
-    <div class="modal-card">
-      <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:8px;">🔍 Wykryto słowo wieloznaczne</h3>
-      <p id="polysemy-prompt" style="font-size:0.95rem; color:#475569; margin-bottom:12px;"></p>
-      <div id="polysemy-options"></div>
-      <div style="margin-top:16px; text-align:right;">
-        <button class="btn-3d secondary" onclick="closePolysemyModal(null)">Pomiń i zapisz</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const CATEGORIES = [
-      "Codzienne życie i dom",
-      "Praca, biznes i finanse",
-      "Podróże, transport i miejsca",
-      "Natura, nauka i zdrowie",
-      "Kultura, emocje i relacje",
-      "Czas, liczby i abstrakcja",
-      "Działania, ruch i opis",
-      "Słowa techniczne, projektowe i inżynierskie"
-    ];
-
-    // Słownik tłumaczeń w locie oraz wykrywania wieloznaczności
-    const QUICK_DICT = {
-      "actuator": "siłownik", "siłownik": "actuator",
-      "bearing": "łożysko", "łożysko": "bearing",
-      "torque": "moment obrotowy", "moment obrotowy": "torque",
-      "welding": "spawanie", "spawanie": "welding",
-      "circuit": "obwód elektryczny", "obwód elektryczny": "circuit",
-      "corrosion": "korozja", "korozja": "corrosion",
-      "gearbox": "skrzynia biegów", "skrzynia biegów": "gearbox",
-      "invoice": "faktura", "faktura": "invoice",
-      "deadline": "termin ostateczny", "termin ostateczny": "deadline",
-      "budget": "budżet", "budżet": "budget",
-      "airport": "lotnisko", "lotnisko": "airport",
-      "luggage": "bagaż", "bagaż": "luggage",
-      "weather": "pogoda", "pogoda": "weather",
-      "run": "biegać", "biegać": "run"
-    };
-
-    const POLYSEMY_DB = {
-      "crane": [
-        { label: "Dźwig / żuraw budowlany (Inżynieria)", cat: "Słowa techniczne, projektowe i inżynierskie" },
-        { label: "Żuraw (Ptak)", cat: "Natura, nauka i zdrowie" }
-      ],
-      "pitch": [
-        { label: "Skok gwintu / nachylenie (Inżynieria)", cat: "Słowa techniczne, projektowe i inżynierskie" },
-        { label: "Boisko / prezentacja biznesowa", cat: "Praca, biznes i finanse" }
-      ],
-      "scale": [
-        { label: "Skala rysunku / osad (Inżynieria)", cat: "Słowa techniczne, projektowe i inżynierskie" },
-        { label: "Waga", cat: "Codzienne życie i dom" }
-      ],
-      "nut": [
-        { label: "Nakrętka (Mechanika)", cat: "Słowa techniczne, projektowe i inżynierskie" },
-        { label: "Orzech", cat: "Codzienne życie i dom" }
-      ],
-      "bolt": [
-        { label: "Śruba / sworzeń (Mechanika)", cat: "Słowa techniczne, projektowe i inżynierskie" },
-        { label: "Piorun", cat: "Natura, nauka i zdrowie" }
-      ]
-    };
-
-    const DB_NAME = "BritVocabDB";
-    const DB_VERSION = 1;
-    let dbInstance = null;
-    let appState = { words: [], settings: { theme: "boy", isCategorized: false } };
-
-    function initDB() {
-      return new Promise((resolve) => {
-        if (!window.indexedDB) { loadFromLocalStorage(); return resolve(); }
-        const request = indexedDB.open(DB_NAME, DB_VERSION);
-        request.onupgradeneeded = (e) => { e.target.result.createObjectStore("store"); };
-        request.onsuccess = (e) => {
-          dbInstance = e.target.result;
-          const tx = dbInstance.transaction("store", "readonly");
-          const getReq = tx.objectStore("store").get("appState");
-          getReq.onsuccess = () => {
-            if (getReq.result) appState = getReq.result; else loadFromLocalStorage();
-            resolve();
-          };
-          getReq.onerror = () => { loadFromLocalStorage(); resolve(); };
-        };
-        request.onerror = () => { loadFromLocalStorage(); resolve(); };
-      });
-    }
-
-    function saveState() {
-      localStorage.setItem("BritVocabFallback", JSON.stringify(appState));
-      if (dbInstance) {
-        const tx = dbInstance.transaction("store", "readwrite");
-        tx.objectStore("store").put(appState, "appState");
-      }
-    }
-
-    function loadFromLocalStorage() {
-      const raw = localStorage.getItem("BritVocabFallback");
-      if (raw) { try { appState = JSON.parse(raw); } catch (e) {} }
-    }
-
-    // Automatyczne tłumaczenie w czasie rzeczywistym podczas wpisywania
-    function liveTranslate(sourceLang) {
-      const enInput = document.getElementById("input-en");
-      const plInput = document.getElementById("input-pl");
-      const val = sourceLang === 'en' ? enInput.value.trim().toLowerCase() : plInput.value.trim().toLowerCase();
-      
-      if (!val) return;
-      if (QUICK_DICT[val]) {
-        if (sourceLang === 'en') {
-          if (!plInput.value) plInput.value = QUICK_DICT[val];
-        } else {
-          if (!enInput.value) enInput.value = QUICK_DICT[val];
-        }
-      }
-    }
-
-    function classifyWord(wordObj) {
-      if (wordObj.forcedCategory) return wordObj.forcedCategory;
-      const text = `${wordObj.en} ${wordObj.pl} ${wordObj.contextNote || ""}`.toLowerCase();
-      const techRegex = /(CAD|BIM|alloy|actuator|bearing|beam|blueprint|circuit|corrosion|diagram|dimension|engine|engineering|flange|friction|gear|hydraulic|load|maintenance|module|nozzle|parameter|piston|prototype|relay|resistance|schematic|sensor|shaft|simulation|specification|steel|stress|tolerance|torque|valve|voltage|śruba|nakrętka|siłownik|łożysko|naprężen|schemat|obwód|czujnik|spaw|przekładni|wał|tłok|zawór|stal|stop|wytrzymałoś|specyfikacj|hydraul)/i;
-      if (techRegex.test(text)) return "Słowa techniczne, projektowe i inżynierskie";
-      if (/(salary|invoice|meeting|deadline|budget|faktura|budżet|umowa|klient|zysk|biuro)/.test(text)) return "Praca, biznes i finanse";
-      if (/(airport|ticket|station|luggage|lotnisko|bilet|dworzec|bagaż|podróż)/.test(text)) return "Podróże, transport i miejsca";
-      if (/(forest|river|weather|health|doctor|las|rzeka|pogoda|zdrowie|lekarz)/.test(text)) return "Natura, nauka i zdrowie";
-      if (/(friend|family|music|movie|przyjaciel|rodzina|muzyka|film)/.test(text)) return "Kultura, emocje i relacje";
-      if (/(always|never|century|future|zawsze|nigdy|wiek|przyszłość)/.test(text)) return "Czas, liczby i abstrakcja";
-      if (/(run|walk|fast|build|biegać|iść|szybki|budować)/.test(text)) return "Działania, ruch i opis";
-      return "Codzienne życie i dom";
-    }
-
-    function evaluateCategorizationRule() {
-      const count = appState.words.length;
-      appState.settings.isCategorized = count >= 51;
-      appState.words.forEach(w => {
-        w.category = count >= 51 ? classifyWord(w) : "Pula startowa (przed 51. słowem)";
-      });
-    }
-
-    let pendingWordDraft = null;
-
-    function handleAddWord(e) {
-      e.preventDefault();
-      const enInput = document.getElementById("input-en");
-      const plInput = document.getElementById("input-pl");
-      const en = enInput.value.trim();
-      const pl = plInput.value.trim();
-      if (!en || !pl) return;
-
-      const key = en.toLowerCase();
-      if (POLYSEMY_DB[key]) {
-        pendingWordDraft = { en, pl };
-        openPolysemyModal(key, POLYSEMY_DB[key]);
-      } else {
-        finalizeAddWord(en, pl, null, null);
-      }
-      enInput.value = "";
-      plInput.value = "";
-    }
-
-    function openPolysemyModal(wordKey, options) {
-      const modal = document.getElementById("polysemy-modal");
-      document.getElementById("polysemy-prompt").textContent = `Słowo „${wordKey}” ma kilka znaczeń. Wybierz kontekst:`;
-      const container = document.getElementById("polysemy-options");
-      container.innerHTML = "";
-      options.forEach(opt => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "context-option";
-        btn.textContent = opt.label;
-        btn.onclick = () => closePolysemyModal(opt);
-        container.appendChild(btn);
-      });
-      modal.classList.add("open");
-    }
-
-    function closePolysemyModal(selectedOption) {
-      document.getElementById("polysemy-modal").classList.remove("open");
-      if (pendingWordDraft) {
-        finalizeAddWord(pendingWordDraft.en, pendingWordDraft.pl, selectedOption?.label, selectedOption?.cat);
-        pendingWordDraft = null;
-      }
-    }
-
-    function finalizeAddWord(en, pl, contextNote, forcedCategory) {
-      const wasCat = appState.settings.isCategorized;
-      appState.words.unshift({
-        id: crypto.randomUUID ? crypto.randomUUID() : String(Math.random()),
-        en, pl, contextNote, forcedCategory,
-        category: "", createdAt: Date.now(),
-        stats: { attempts: 0, correct: 0, streak: 0, masteryScore: 0, nextReview: Date.now() }
-      });
-      evaluateCategorizationRule();
-      saveState();
-      refreshUI();
-      if (!wasCat && appState.settings.isCategorized) {
-        alert("🎉 Osiągnięto 51 słów! System automatycznie podzielił bazę na 8 kategorii.");
-      }
-    }
-
-    function deleteWord(id) {
-      appState.words = appState.words.filter(w => w.id !== id);
-      evaluateCategorizationRule();
-      saveState();
-      refreshUI();
-    }
-
-    // Moduł ćwiczeń
-    let currentQuizWord = null;
-    let currentDirection = "EN_PL";
-    let questionResolved = false;
-
-    function pickNextWord() {
-      if (appState.words.length === 0) return null;
-      const sorted = [...appState.words].sort((a, b) => a.stats.masteryScore - b.stats.masteryScore + (Math.random() * 10 - 5));
-      return sorted[0];
-    }
-
-    function nextQuestion() {
-      questionResolved = false;
-      const feedback = document.getElementById("quiz-feedback");
-      feedback.className = "feedback-banner";
-      feedback.textContent = "";
-      document.getElementById("next-btn-wrap").classList.add("hidden");
-      document.getElementById("speech-status").textContent = "";
-
-      const input = document.getElementById("quiz-answer-input");
-      input.value = "";
-      input.disabled = false;
-
-      if (appState.words.length === 0) {
-        document.getElementById("quiz-empty").classList.remove("hidden");
-        document.getElementById("quiz-active").classList.add("hidden");
-        return;
-      }
-
-      document.getElementById("quiz-empty").classList.add("hidden");
-      document.getElementById("quiz-active").classList.remove("hidden");
-
-      currentQuizWord = pickNextWord();
-      const selectedDir = document.getElementById("quiz-direction").value;
-      currentDirection = selectedDir === "MIX" ? (Math.random() > 0.5 ? "EN_PL" : "PL_EN") : selectedDir;
-
-      document.getElementById("quiz-dir-label").textContent = currentDirection === "EN_PL" ? "🇬🇧 Angielski → 🇵🇱 Polski" : "🇵🇱 Polski → 🇬🇧 Angielski";
-      document.getElementById("quiz-question-word").textContent = currentDirection === "EN_PL" ? currentQuizWord.en : currentQuizWord.pl;
-      input.focus();
-    }
-
-    function similarityScore(a, b) {
-      a = a.toLowerCase().trim(); b = b.toLowerCase().trim();
-      if (a === b) return 1;
-      if (!a.length || !b.length) return 0;
-      const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
-      for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
-      for (let i = 1; i <= b.length; i++) {
-        for (let j = 1; j <= a.length; j++) {
-          matrix[i][j] = b[i - 1] === a[j - 1] ? matrix[i - 1][j - 1] : Math.min(matrix[i - 1][j - 1] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j] + 1);
-        }
-      }
-      return (Math.max(a.length, b.length) - matrix[b.length][a.length]) / Math.max(a.length, b.length);
-    }
-
-    function checkAnswer(viaSpeech = false, speechAlternatives = []) {
-      if (questionResolved || !currentQuizWord) return;
-      const expectedRaw = currentDirection === "EN_PL" ? currentQuizWord.pl : currentQuizWord.en;
-      const acceptedVariants = expectedRaw.split(/[,;/]/).map(s => s.trim().toLowerCase()).filter(Boolean);
-      const userText = document.getElementById("quiz-answer-input").value.trim().toLowerCase();
-      const candidates = viaSpeech ? [...speechAlternatives, userText] : [userText];
-
-      let isCorrect = false;
-      for (const cand of candidates) {
-        if (!cand) continue;
-        for (const valid of acceptedVariants) {
-          if (similarityScore(cand, valid) >= (viaSpeech ? 0.72 : 0.88)) { isCorrect = true; break; }
-        }
-        if (isCorrect) break;
-      }
-      resolveQuestion(isCorrect, expectedRaw, viaSpeech);
-    }
-
-    function dontKnowWord() {
-      if (questionResolved || !currentQuizWord) return;
-      const expectedRaw = currentDirection === "EN_PL" ? currentQuizWord.pl : currentQuizWord.en;
-      resolveQuestion(false, expectedRaw, false, true);
-    }
-
-    function resolveQuestion(isCorrect, expectedRaw, viaSpeech, usedLifeline = false) {
-      questionResolved = true;
-      document.getElementById("quiz-answer-input").disabled = true;
-      document.getElementById("next-btn-wrap").classList.remove("hidden");
-
-      const stats = currentQuizWord.stats;
-      stats.attempts += 1;
-      const feedback = document.getElementById("quiz-feedback");
-
-      if (isCorrect) {
-        stats.correct += 1; stats.streak += 1;
-        const bonus = viaSpeech ? 22 : 18;
-        stats.masteryScore = Math.min(100, stats.masteryScore + bonus);
-        feedback.className = "feedback-banner ok";
-        feedback.textContent = `✅ Poprawnie! Odpowiedź: „${expectedRaw}” (+${bonus}% pewności)`;
-      } else {
-        stats.streak = 0;
-        const penalty = usedLifeline ? 20 : 15;
-        stats.masteryScore = Math.max(0, stats.masteryScore - penalty);
-        feedback.className = "feedback-banner err";
-        feedback.textContent = `❌ Prawidłowa odpowiedź to: „${expectedRaw}”.`;
-      }
-      saveState();
-      renderStats();
-      renderWordList();
-    }
-
-    function startSpeechRecognition() {
-      if (questionResolved) return;
-      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const statusEl = document.getElementById("speech-status");
-      const micBtn = document.getElementById("btn-mic");
-      if (!SpeechRec) { statusEl.textContent = "Brak obsługi mowy w przeglądarce."; return; }
-
-      const recognition = new SpeechRec();
-      recognition.lang = currentDirection === "EN_PL" ? "pl-PL" : "en-GB";
-      recognition.maxAlternatives = 5;
-      micBtn.classList.add("mic-pulse");
-      statusEl.textContent = "🎙️ Słucham...";
-
-      recognition.onresult = (e) => {
-        micBtn.classList.remove("mic-pulse");
-        const alt = [];
-        for (let i = 0; i < e.results[0].length; i++) alt.push(e.results[0][i].transcript.toLowerCase().trim());
-        document.getElementById("quiz-answer-input").value = alt[0];
-        checkAnswer(true, alt);
-      };
-      recognition.onerror = () => { micBtn.classList.remove("mic-pulse"); statusEl.textContent = "Błąd rozpoznawania mowy."; };
-      recognition.onend = () => { micBtn.classList.remove("mic-pulse"); };
-      recognition.start();
-    }
-
-    function switchTab(tabName) {
-      ["vocab", "practice", "stats", "settings"].forEach(t => {
-        document.getElementById(`tab-${t}`).classList.toggle("hidden", t !== tabName);
-        document.querySelector(`[data-tab="${t}"]`).classList.toggle("active-tab", t === tabName);
-      });
-      if (tabName === "practice" && !currentQuizWord) nextQuestion();
-      if (tabName === "stats") renderStats();
-    }
-
-    function setTheme(theme) {
-      appState.settings.theme = theme;
-      document.documentElement.setAttribute("data-theme", theme);
-      saveState();
-    }
-
-    function renderWordList() {
-      const container = document.getElementById("word-list-container");
-      const filterSelect = document.getElementById("category-filter");
-      const currentFilter = filterSelect.value;
-
-      filterSelect.innerHTML = `<option value="ALL">Wszystkie kategorie (${appState.words.length})</option>`;
-      if (appState.settings.isCategorized) {
-        CATEGORIES.forEach(cat => {
-          const count = appState.words.filter(w => w.category === cat).length;
-          const opt = document.createElement("option");
-          opt.value = cat; opt.textContent = `${cat} (${count})`;
-          if (cat === currentFilter) opt.selected = true;
-          filterSelect.appendChild(opt);
-        });
-      }
-
-      const filtered = currentFilter === "ALL" || !appState.settings.isCategorized ? appState.words : appState.words.filter(w => w.category === currentFilter);
-      document.getElementById("total-count").textContent = appState.words.length;
-
-      if (filtered.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-secondary); text-align:center; padding:15px;">Brak słów.</p>`;
-        return;
-      }
-
-      container.innerHTML = filtered.map(w => `
-        <div class="word-item">
-          <div class="word-pair">
-            <span class="word-en">${w.en}</span>
-            <span class="word-pl">${w.pl}</span>
-            ${w.contextNote ? `<span class="word-context">${w.contextNote}</span>` : ""}
-          </div>
-          <div class="word-meta">
-            <span class="badge ${w.category === "Słowa techniczne, projektowe i inżynierskie" ? "tech" : ""}">${w.category}</span>
-            <span class="mastery-pill">${w.stats.masteryScore}%</span>
-            <button class="btn-3d secondary" style="padding:5px 10px; font-size:0.8rem;" onclick="deleteWord('${w.id}')">🗑️</button>
-          </div>
-        </div>
-      `).join("");
-    }
-
-    function renderMilestone() {
-      const count = appState.words.length;
-      document.getElementById("milestone-fill").style.width = `${Math.min(100, (count / 51) * 100)}%`;
-      document.getElementById("milestone-title").textContent = appState.settings.isCategorized
-        ? `✅ Kategoryzacja aktywna (8 kategorii — ${count} słów)`
-        : `🔓 Odblokowanie kategoryzacji: ${count} / 51 słów`;
-    }
-
-    function renderStats() {
-      const total = appState.words.length;
-      const mastered = appState.words.filter(w => w.stats.masteryScore >= 85).length;
-      const avgConf = total ? Math.round(appState.words.reduce((a, b) => a + b.stats.masteryScore, 0) / total) : 0;
-      const techCount = appState.words.filter(w => w.category === "Słowa techniczne, projektowe i inżynierskie").length;
-
-      document.getElementById("stat-total").textContent = total;
-      document.getElementById("stat-mastered").textContent = mastered;
-      document.getElementById("stat-avg-confidence").textContent = `${avgConf}%`;
-      document.getElementById("stat-tech-count").textContent = techCount;
-
-      const breakdown = document.getElementById("category-breakdown");
-      if (!appState.settings.isCategorized) {
-        breakdown.innerHTML = `<p style="color:var(--text-secondary);">Podział na 8 kategorii aktywuje się po osiągnięciu 51 słów (${total}/51).</p>`;
-        return;
-      }
-      breakdown.innerHTML = CATEGORIES.map(cat => {
-        const items = appState.words.filter(w => w.category === cat);
-        const avg = items.length ? Math.round(items.reduce((a, b) => a + b.stats.masteryScore, 0) / items.length) : 0;
-        const isTech = cat === "Słowa techniczne, projektowe i inżynierskie";
-        return `
-          <div class="stat-box" style="text-align:left; ${isTech ? "border:2px solid var(--accent-primary);" : ""}">
-            <div style="font-weight:800; font-size:0.92rem;">${isTech ? "⚙️ " : ""}${cat}</div>
-            <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:0.85rem; color:var(--text-secondary);">
-              <span>Słów: <strong>${items.length}</strong></span>
-              <span>Pewność: <strong>${avg}%</strong></span>
-            </div>
-          </div>
-        `;
-      }).join("");
-    }
-
-    function refreshUI() {
-      document.documentElement.setAttribute("data-theme", appState.settings.theme || "boy");
-      renderMilestone();
-      renderWordList();
-      renderStats();
-    }
-
-    function exportBackup() {
-      const blob = new Blob([JSON.stringify(appState, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url; a.download = `britvocab-backup.json`; a.click();
-      URL.revokeObjectURL(url);
-    }
-
-    function importBackup(e) {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        try {
-          appState = JSON.parse(ev.target.result);
-          evaluateCategorizationRule();
-          saveState();
-          refreshUI();
-          alert("Wczytano poprawnie plik bazy!");
-        } catch (err) { alert("Błąd pliku."); }
-      };
-      reader.readAsText(file);
-    }
-
-    function clearAllData() {
-      if (!confirm("Usunąć wszystkie dane?")) return;
-      appState.words = []; appState.settings.isCategorized = false;
-      saveState(); refreshUI();
-    }
-
-    function seedSampleWords() {
-      const samples = [
-        ["actuator", "siłownik"], ["tensile strength", "wytrzymałość na rozciąganie"], ["flange", "kołnierz rurowy"],
-        ["blueprint", "rysunek techniczny"], ["tolerance", "tolerancja wymiarowa"], ["bearing", "łożysko"],
-        ["torque", "moment obrotowy"], ["welding", "spawanie"], ["circuit", "obwód elektryczny"],
-        ["hydraulic valve", "zawór hydrauliczny"], ["corrosion", "korozja"], ["gearbox", "skrzynia biegów"],
-        ["invoice", "faktura"], ["deadline", "termin ostateczny"], ["budget", "budżet"],
-        ["negotiation", "negocjacje"], ["profit", "zysk"], ["contract", "umowa"],
-        ["airport", "lotnisko"], ["luggage", "bagaż"], ["platform", "peron"],
-        ["journey", "podróż"], ["passport", "paszport"], ["bridge", "most"],
-        ["weather", "pogoda"], ["forest", "las"], ["mountain", "góra"],
-        ["health", "zdrowie"], ["medicine", "lekarstwo"], ["river", "rzeka"],
-        ["friendship", "przyjaźń"], ["trust", "zaufanie"], ["family", "rodzina"],
-        ["library", "biblioteka"], ["movie", "film"], ["art", "sztuka"],
-        ["century", "wiek"], ["future", "przyszłość"], ["average", "średnia"],
-        ["reason", "powód"], ["history", "historia"], ["always", "zawsze"],
-        ["improve", "ulepszać"], ["reliable", "niezawodny"], ["build", "budować"],
-        ["fast", "szybki"], ["kitchen", "kuchnia"], ["window", "okno"],
-        ["furniture", "meble"], ["breakfast", "śniadanie"], ["key", "klucz"]
-      ];
-      samples.forEach(([en, pl]) => {
-        appState.words.push({
-          id: crypto.randomUUID ? crypto.randomUUID() : String(Math.random()),
-          en, pl, contextNote: null, forcedCategory: null, category: "",
-          createdAt: Date.now(), stats: { attempts: 0, correct: 0, streak: 0, masteryScore: 0, nextReview: Date.now() }
-        });
-      });
-      evaluateCategorizationRule();
-      saveState();
-      refreshUI();
-      alert("Dodano 51 słów testowych!");
-    }
-
-    initDB().then(() => { evaluateCategorizationRule(); refreshUI(); });
-  </script>
-</body>
-</html>
+      <path d="M638 220 Q 668 196 698 22
